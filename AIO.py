@@ -32,18 +32,17 @@ def create_large_termux_text_with_numbers():
     
     # Ask the user to select an option
     try:
-        choice = int(input("\nBir seçenek seçin (1-5): "))
+        choice = int(input("\nChoose an option (1-5): "))
         if 1 <= choice <= 5:
             selected_tool = tools[choice - 1]
-            print(f"\nSeçtiğiniz seçenek: {selected_tool['name']}")
+            print(f"\nYou selected: {selected_tool['name']}")
             # Clone the selected GitHub repository
             os.system(f"git clone {selected_tool['url']}")
-            print(f"\n{selected_tool['name']} aracı indirildi.")
+            print(f"\n{selected_tool['name']} tool has been downloaded.")
         else:
-            print("\nGeçersiz seçenek. Lütfen 1 ile 5 arasında bir sayı girin.")
+            print("\nInvalid option. Please enter a number between 1 and 5.")
     except ValueError:
-        print("\nGeçersiz giriş. Lütfen bir sayı girin.")
+        print("\nInvalid input. Please enter a number.")
 
 if __name__ == "__main__":
     create_large_termux_text_with_numbers()
-    
