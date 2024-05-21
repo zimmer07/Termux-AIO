@@ -8,7 +8,10 @@ def create_large_termux_text_with_numbers():
     
     # Create the large "Termux-AIO" text
     ascii_art = pyfiglet.figlet_format("Termux-AIO")
-    print(ascii_art)
+    print(Fore.RED + ascii_art)
+    
+    # Made By; Zimmer07
+    print(Fore.BLUE + "Made By; Zimmer07\n")
     
     # Define colors for numbers
     colors = [
